@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+  <title>Index</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <header>  
+        <div class="bannerLogo"><h1>This is the Header</h1></div>
+        <div class="bannerNav"> 
+          <% if (isAuthenticated) { %>
+          <ul>
+            <li>
+              <a href="/watchlist">[Watchlist]</a>
+              <a href="/following">[Following]</a>
+            </li>
+            <li>
+              <a href="/profile"><%= user.username %></a>
+              <a href="/subs">[ X ]</a>
+            </li>
+            <li>
+              <a href="/logout">logout</a>
+            </li>
+          </ul>
+            <% } else { %>
+          <form action="/login" method="post">
+          <ul>
+            <li>
+              <input type="text" name="username" placeholder="username">
+              <input type="password" name="password" placeholder="password">
+            </li>
+            <li>
+              <a href="/register">Register</a>
+              <button type="submit">Login</button>
+            </li>
+          </ul>
+          </form>
+          <% } %>
+        </div>
+      </header>
+      <main>
+      <% if (message.length > 0) { %>
+      <div class="alert"><%= message %></div>
+      <% } %>
+
+        <img class="center" src="images/spark.png" width=300 height=300>
+
+      <section id="categories"><h1>Categories</h1></section>
+      </main>
+    </div>
+  </body>
+</html>

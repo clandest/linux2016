@@ -1,0 +1,28 @@
+
+lsblk -f //List current block devices
+
+fdisk -l //List current tables and partistions on a device
+
+mkfs //Format a file system
+
+dd //Copies a file to a device byte by byte
+
+pacman -S //Install package
+
+pacman -Ss //Search for packages
+
+pacman -Syy //Update all outdates packages
+
+pacman -Syu //Update package database 
+
+pacman -Q //Queries local package database
+
+pacman -R //Remove single package, leaving all dependencies
+
+pacman -Rs //Remove a package, its dependencies and all packages that depend on target
+
+pacman -Sc //Clear package cache
+
+digikam //Photo managment
+
+deepin-screenshot //Takes a screenshot

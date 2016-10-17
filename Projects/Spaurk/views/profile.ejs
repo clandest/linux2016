@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+  <title>Profile</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" type="text/css" href="form.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <header>  
+        <div class="bannerLogo"><h1>This is the Header</h1></div>
+        <div class="bannerNav"> 
+          <% if (isAuthenticated) { %>
+          <ul>
+            <li>
+              <a href="/watchlist">[Watchlist]</a>
+              <a href="/following">[Following]</a>
+            </li>
+            <li>
+              <a href="/profile"><%= user.username %></a>
+              <a href="/subs">[ X ]</a>
+            </li>
+            <li>
+              <a href="/logout">logout</a>
+            </li>
+          </ul>
+            <% } else { %>
+          <form action="/login" method="post">
+          <ul>
+            <li>
+              <input type="text" name="username" placeholder="username">
+              <input type="password" name="password" placeholder="password">
+            </li>
+            <li>
+              <a href="/register">Register</a>
+              <button type="submit">Login</button>
+            </li>
+          </ul>
+          </form>
+          <% } %>
+        </div>
+      </header>
+      <main>
+      <div class="info">
+      <section class="form">
+        <form class="contact_form" action="/profile/save" method="post" name="contact_form">
+        <ul>
+          <li>
+            <h2>Social:</h2>
+          </li>
+          <li>
+            <label for="soundcloud">SoundCloud:</label>
+            <input type="url" name="soundcloud" placeholder="soundcloud" > 
+          </li>
+          <li>
+            <label for="bandcamp">BandCamp:</label>
+            <input type="url" name="bandcamp" placeholder="bandcamp">
+          </li>
+          <li>
+            <label for="twitter">Twitter:</label>
+            <input type="url" name="twitter" placeholder="twitter">
+          </li>
+          <li>
+            <label for="website">Website:</label>
+            <input type="url" name="website" placeholder="website">
+          </li>
+
+          <li>
+            <button class="submit" type="submit">Save form</button>
+          </li>
+        </ul>
+      </form>
+      </section>
+      </div>
+      <section id="categories"><h1>Categories</h1></section>
+      </main>
+    </div>
+  </body>
+</html>

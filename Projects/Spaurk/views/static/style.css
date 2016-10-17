@@ -1,0 +1,76 @@
+.container{
+    margin: 0 auto;
+    width: 900px;
+    position: relative;
+}
+
+header {
+    background-color: black;
+    color: white;
+    width: 900px;
+    height: 100px;
+    position: fixed;
+    z-index: 1;
+}
+
+main {
+    background-color: limegreen;
+    margin: 0 auto;
+    width: 900px;
+    height: 100%;
+    position: relative;
+    top: 100px;
+}
+
+.info{
+    width:500px;
+    background:white;
+    float:left;
+    margin-left:5px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.bannerLogo {
+    display: inline;
+    float: left; 
+}
+
+.bannerNav {
+    float: right;
+    padding-top: 5px;
+    padding-right: 5px; 
+    text-align: right;
+}
+
+header ul {
+    list-style-type: none;
+    overflow: hidden;
+    float: right;
+}
+
+header li {
+    position: relative;
+}
+
+section#categories {
+    background-color: black;
+    color: white;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+section.form {
+    width:500px;
+    margin-left: auto;
+    margin-right: auto;
+}

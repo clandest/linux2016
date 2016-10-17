@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+  <title>Register</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" type="text/css" href="form.css">
+
+  </head>
+
+  <body>
+    <div class="container">
+      <header>  
+        <div class="bannerLogo"><h1>This is the Header</h1></div>
+        <div class="bannerNav"> 
+          <!--
+          <ul>
+            <li>
+              <a href="/watchlist">[Watchlist]</a>
+              <a href="/following">[Following]</a>
+            </li>
+            <li>
+              <a href="/profile">clandest</a>
+              <a href="/subs">[ X ]</a>
+            </li>
+            <li>
+              <a href="/logout">logout</a>
+            </li>
+          <ul>
+          -->
+          <form action="/login" method="post">
+          <ul>
+            <li>
+              <input type="text" name="username" placeholder="username">
+              <input type="password" name="password" placeholder="password">
+            </li>
+            <li>
+              <a href="/register">Register</a>
+              <button type="submit">Login</button>
+            </li>
+          </ul>
+          </form>
+        </div>
+      </header>
+      <main>
+      <% if (message.length > 0) { %>
+      <div class="alert"><%= message %></div>
+      <% } %>
+      <section class="form">
+        <form class="contact_form" action="" method="post" name="contact_form">
+        <ul>
+          <li>
+            <h2>Register User</h2>
+          </li>
+          <li>
+            <label for="name">Username:</label>
+            <input type="text" name="username" required pattern="^[-\w\.\$@\*\!]{3,25}$" placeholder="xXxxxEnternalFlame" > 
+          </li>
+          <li>
+            <label for="password">Password:</label>
+            <input type="password" name="password" required placeholder="password">
+          </li>
+          <li>
+            <label for="email">Email:</label>
+            <input type="email" name="email">
+          </li>
+
+          <li>
+            <button class="submit" type="submit">Submit Form</button>
+          </li>
+        </ul>
+      </form>
+      </section>
+      <section id="categories"><h1>Categories</h1></section>
+      </main>
+    </div>
+  </body>
+</html>
