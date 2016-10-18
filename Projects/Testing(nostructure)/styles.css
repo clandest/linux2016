@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    margin:0 auto;
+}
+
+section {
+    margin-bottom: 60px;
+    padding: 10px;
+    background-color: #efefef;
+    width:50%;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+section h2 {
+    text-align:center;
+}
+
+label {
+    display: block;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    margin: 0;
+    font-size: 12px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus{
+    outline: none;
+}
+
+   
+ul.input-login {
+    display:inline;
+    list-style-type: none;
+    list-style-position:outside;
+}
+
+ul.input-login li {
+    position:relative;
+    float:right;
+    padding-bottom:5px;
+    padding-left:5px;
+}
+
+ul.input-list {
+    list-style-type: none;
+    list-style-position:outside;
+    margin-left: 20px;
+
+}
+
+ul.input-list li {
+    position:relative;
+    padding:12px;
+    border-bottom:1px solid #eee;
+}
+
+ul.input-list button {
+    width:100%;
+}   
+
+.style-1 input[type="text"], .style-1 input[type="password"], .style-1 input[type="email"] {
+    padding: 3px;
+    border: solid 1px gainsboro;
+    -webkit-transition: box-shadow 0.3s, border 0.3s;
+    -moz-transition: box-shadow 0.3s, border 0.3s;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+
+.style-1 input[type="text"]:focus, .style-1 input[type="text"].focus, .style-1 input[type="password"]:focus, .style-1 input[type="password"].focus {
+    border: solid 1px #707070;
+    -webkit-box-shadow: 0 0 5px 1px #696969;
+    -moz-box-shadow: 0 0 5px 1px #696969;
+    box-shadow: 0 0 5px 1px #696969;
+}
+
+.main{
+    background-color: lightgreen;
+    margin: 0px auto;
+    width: 900px;
+}
+
+.banner{
+    background-color: black;
+    color:white;
+    position: relative;
+    height:70px;
+    padding: 3px;
+}
+
+.bannerText{
+    display:inline;
+    float:left;
+    width:50%;
+    height:50px;
+    padding-top: 10px;
+}
+
+.bannerUser{
+    float:right;
+    width:50%;
+    padding-top:5px;
+    padding-right:5px;
+}
+
+.bannerMenu{
+    float:right;
+    width:50%;
+    padding-top:5px;
+    padding-right:5px;
+
+}
+
+.banner a {
+    font-size:10px;
+    float:right;
+    padding-left:5px;
+    font-size:12px;
+}
+
+.banner input {
+    float:right;
+    margin-left:5px;
+}

@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nouislider.min.css">
+    <script src="nouislider.min.js"></script>
+</head>
+<body>
+    
+<div class="main">
+    <div class="banner">
+        <div class="bannerText"><h1>Spaurk.net</h1></div>
+        <div class="bannerMenu">
+            <a href="">[ Following(00) ]</a>
+            <a href="">[ Watchlist ]</a>
+        </div>
+        <div class="bannerUser style-1">
+            <a href="">[ X ]</a>
+            <a href="">clandest</a>
+            <br>
+            <a href="" id="logout">logout</a>
+            <!--
+            <input type="password" id="password" placeholder="Password">
+            <input type="text" id="username" placeholder="Username">
+            <br>
+            <br>
+            <a href="">Login</a>
+            <a href="">Register</a>
+            -->
+        </div>
+    </div>
+
+<div class="content">
+    <form action="" method="post" enctype="multipart/form-data">
+    <input type="file" id="fileElem" multiple accept="audio/*" style="display:none" onchange="handleFiles(this.files)">
+    <a href="#" id="fileSelect">Select some files</a><br>
+    <span>Artist</span><input type="text" id="artist"><br>
+    <span>Title</span><input type="text" id="title"><br>
+    <input type="text" id="highlight"><br>
+    <span>Start</span><input type="text" id="start"><span>Stop</span><input type="text" id="stop"><br>
+    <p>Social links</p>
+    <span>Youtube</span><input type="text" id="youtube"><br>
+    <span>Website URL</span><input type="text" id="website"><br>
+    <span>Twitter</span><input type="text" id="twitter"><br>
+    </form>
+    <pre id="response"></pre>
+    <div id="fileList">
+        <p>No files selected!</p>
+    </div>
+
+    <div id="video_player_box">
+        <audio id="audio" autoplay="false">
+        </audio>
+    </div>
+    <div id="video_controls_bar">
+        <div id="seekslider"></div>
+    </div>
+
+    <div id="post-show">
+            <div class="post" id="one">
+                <div class="highlight">#OffTheChain!</div>
+                <div class="postMenu"><img src="images/menu.png" height="15" width="25"></div>
+                <div class="playArea"><img src="images/play.png" height="50" width="50"></div>
+                <div class="postTitle">
+                God Called in sick Today adfhsfka
+                </div>
+                <div class="postArtist">
+                AFI
+                </div>
+                <div class="postUser">Oxe Null</div><div class="icons">[ x ] [ x ]</div>
+            </div>
+    </div>
+    <div class="categories">
+    <h2>Categories</h2>
+    </div>
+
+    </div>
+</div>
+
+<script>
+var slider = document.getElementById('seekslider');
+noUiSlider.create(slider, {
+    start:[10,30],
+    connect:true,
+    range:{
+        'min':0,
+        'max':100
+    }
+});
+</script>
+</body>
+
+</html>
